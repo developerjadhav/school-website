@@ -1,8 +1,9 @@
-import Hero from "../components/home/Hero";
+// import Hero from "../components/home/Hero";
 
 const Home = () => {
   return (
-    <Hero />
+    // <Hero />
+    "this is HOME PAGE"
   )
 }
 

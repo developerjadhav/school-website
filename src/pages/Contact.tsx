@@ -1,9 +1,15 @@
-const Contact = () => {
-  return (
-    <div>
-      <h1>Contact</h1>
-    </div>
-  )
-}
+import ContactIntro from "../components/contact/ContactIntro";
+import ContactSection from "../components/contact/ContactSection";
+import LocationMap from "../components/contact/LocationMap";
 
-export default Contact
+const ContactPage = () => {
+  return (
+    <>
+        <ContactIntro />
+        <ContactSection />
+        <LocationMap />
+    </>
+  );
+};
+
+export default ContactPage;

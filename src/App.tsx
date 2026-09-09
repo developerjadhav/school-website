@@ -5,15 +5,18 @@ import About from "./pages/About";
 import Academics from "./pages/Academics";
 import Admissions from "./pages/Admissions";
 import Facilities from "./pages/Facilities";
-import Gallery from "./pages/Gallery";
+import Gallery from "./pages/GalleryPage";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
+import Hero from "../src/components/home/Hero";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+
+      <Hero />
 
       <main>
         <Routes>

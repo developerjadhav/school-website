@@ -1,1 +1,5 @@
 @import "tailwindcss";
+h1 {
+  font-family: "Cinzel", "Palatino Linotype", sans-serif;
+  font-weight: 400;
+}

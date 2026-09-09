@@ -72,7 +72,7 @@ const Footer = () => {
 
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/" target="_blank"
                 className="hover:opacity-80"
                 aria-label="Facebook"
               >
@@ -80,7 +80,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/"target="_blank"
                 className="hover:opacity-80"
                 aria-label="Instagram"
               >
@@ -88,7 +88,8 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.youtube.com/"
+                target="_blank"
                 className="hover:opacity-80"
                 aria-label="YouTube"
               >
