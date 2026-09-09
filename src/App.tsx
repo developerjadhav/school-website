@@ -16,9 +16,10 @@ function App() {
     <BrowserRouter>
       <Navbar />
 
-      <Hero />
+      <main className="pt-12.5">
 
-      <main>
+        <Hero />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
