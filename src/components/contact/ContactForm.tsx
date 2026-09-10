@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { GOOGLE_SCRIPT_URL_FOR_CONTACT_FORM } from "../../config";
 
 interface FormData {
     name: string;
@@ -7,9 +8,6 @@ interface FormData {
     subject: string;
     message: string;
 }
-
-const GOOGLE_SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbxSaArjFSnzODh6aL3PIw1j1M0EAAQGmjHfnHXfkRCOR8qdlLNaNJSCP8gJ5UfEYRg/exec";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState<FormData>({
@@ -45,7 +43,7 @@ const ContactForm = () => {
         setStatusMessage("");
 
         try {
-            await fetch(GOOGLE_SCRIPT_URL, {
+            await fetch(GOOGLE_SCRIPT_URL_FOR_CONTACT_FORM, {
                 method: "POST",
                 mode: "no-cors",
                 headers: {
