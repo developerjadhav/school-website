@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -14,6 +14,7 @@ const navItems = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAdmissionsOpen, setIsAdmissionsOpen] = useState(false);
 
   // Lock page scrolling when mobile menu is open
   useEffect(() => {
@@ -26,6 +27,7 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setIsAdmissionsOpen(false);
   };
 
   return (
@@ -44,15 +46,70 @@ const Navbar = () => {
 
         {/* Desktop / Tablet Navigation */}
         <div className="hidden h-full md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className="flex h-full items-center px-2 text-sm text-white transition-colors hover:bg-[#191155] lg:px-3 lg:text-base xl:px-4"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            // Admissions with dropdown
+            if (item.label === "Admissions") {
+              return (
+                <div
+                  key={item.path}
+                  className="relative h-full"
+                  onMouseEnter={() => setIsAdmissionsOpen(true)}
+                  onMouseLeave={() => setIsAdmissionsOpen(false)}
+                >
+                  {/* Admissions */}
+                  <Link
+                    to={item.path}
+                    className="flex h-full items-center gap-1 px-2 text-sm text-white transition-colors hover:bg-[#191155] lg:px-3 lg:text-base xl:px-4"
+                  >
+                    {item.label}
+
+                    <ChevronDown
+                      size={15}
+                      className={`transition-transform duration-200 ${
+                        isAdmissionsOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </Link>
+
+                  {/* Admissions Dropdown */}
+                  <div
+                    className={`absolute left-0 top-full w-52 overflow-hidden rounded-b-md bg-white shadow-xl transition-all duration-200 ${
+                      isAdmissionsOpen
+                        ? "visible translate-y-0 opacity-100"
+                        : "invisible -translate-y-2 opacity-0"
+                    }`}
+                  >
+                    {/* <Link
+                      to="/admissions"
+                      onClick={() => setIsAdmissionsOpen(false)}
+                      className="block px-5 py-3 text-sm text-[#2A2076] transition-colors hover:bg-[#f5f3fa]"
+                    >
+                      Admissions
+                    </Link> */}
+
+                    <Link
+                      to="/admissions/enquiry"
+                      onClick={() => setIsAdmissionsOpen(false)}
+                      className="block border-t border-gray-100 px-5 py-3 text-sm text-[#2A2076] transition-colors hover:bg-[#f5f3fa] hover:text-[#D92157]"
+                    >
+                      Admission Enquiry
+                    </Link>
+                  </div>
+                </div>
+              );
+            }
+
+            // All other navigation items
+            return (
+              <Link
+                key={item.path}
+                to={item.path}
+                className="flex h-full items-center px-2 text-sm text-white transition-colors hover:bg-[#191155] lg:px-3 lg:text-base xl:px-4"
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Mobile Menu Button */}
@@ -100,25 +157,90 @@ const Navbar = () => {
           }}
         >
           <div className="py-4">
-            {navItems.map((item, index) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={closeMenu}
-                className={`block border-b border-white/15 px-6 py-4 text-white transition-all duration-300 hover:bg-white/10 ${
-                  isMenuOpen
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-8 opacity-0"
-                }`}
-                style={{
-                  transitionDelay: isMenuOpen
-                    ? `${index * 50}ms`
-                    : "0ms",
-                }}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item, index) => {
+              // Mobile Admissions dropdown
+              if (item.label === "Admissions") {
+                return (
+                  <div
+                    key={item.path}
+                    className={`border-b border-white/15 transition-all duration-300 ${
+                      isMenuOpen
+                        ? "translate-x-0 opacity-100"
+                        : "translate-x-8 opacity-0"
+                    }`}
+                    style={{
+                      transitionDelay: isMenuOpen
+                        ? `${index * 50}ms`
+                        : "0ms",
+                    }}
+                  >
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setIsAdmissionsOpen((previous) => !previous)
+                      }
+                      className="flex w-full items-center justify-between px-6 py-4 text-left text-white transition-colors hover:bg-white/10"
+                      aria-expanded={isAdmissionsOpen}
+                    >
+                      <span>Admissions</span>
+
+                      <ChevronDown
+                        size={18}
+                        className={`transition-transform duration-200 ${
+                          isAdmissionsOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* Mobile Admissions Submenu */}
+                    <div
+                      className={`overflow-hidden bg-black/10 transition-all duration-300 ${
+                        isAdmissionsOpen
+                          ? "max-h-32 opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <Link
+                        to="/admissions"
+                        onClick={closeMenu}
+                        className="block px-10 py-3 text-sm text-white/90 transition-colors hover:bg-white/10"
+                      >
+                        Admissions
+                      </Link>
+
+                      <Link
+                        to="/admissions/enquiry"
+                        onClick={closeMenu}
+                        className="block px-10 py-3 text-sm text-white/90 transition-colors hover:bg-white/10"
+                      >
+                        Admission Enquiry
+                      </Link>
+                    </div>
+                  </div>
+                );
+              }
+
+              // All other mobile navigation items
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={closeMenu}
+                  className={`block border-b border-white/15 px-6 py-4 text-white transition-all duration-300 hover:bg-white/10 ${
+                    isMenuOpen
+                      ? "translate-x-0 opacity-100"
+                      : "translate-x-8 opacity-0"
+                  }`}
+                  style={{
+                    transitionDelay: isMenuOpen
+                      ? `${index * 50}ms`
+                      : "0ms",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
