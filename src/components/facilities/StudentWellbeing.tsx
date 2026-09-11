@@ -101,12 +101,16 @@ const StudentWellbeing = () => {
         </div>
 
         {/* Bottom Highlight */}
-        <div className="mt-12 rounded-3xl bg-[#2A2076] px-8 py-10 text-center md:px-16">
-          <h3 className="mb-3 text-2xl font-normal text-white md:text-3xl">
+        <div className="mt-12 rounded-3xl px-8 py-10 text-center md:px-16"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(217, 33, 87, 0.20) 0%, rgba(41, 31, 117, 0.20) 100%), #FFFFFF",
+          }}>
+          <h3 className="mb-3 text-2xl font-normal text-[#2A2076] md:text-3xl">
             Every Child Deserves to Feel Supported
           </h3>
 
-          <p className="mx-auto max-w-3xl text-sm leading-6 text-white/80 md:text-base">
+          <p className="mx-auto max-w-3xl text-sm leading-6 text-[#2A2076]/80 md:text-base">
             We work towards creating a school environment where students can
             confidently discover their strengths, overcome challenges, and
             become responsible and compassionate individuals.

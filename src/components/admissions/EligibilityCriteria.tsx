@@ -24,7 +24,7 @@ const eligibilityData = [
 ];
 
 const EligibilityCriteria = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
     return (
         <section className="bg-[#F7F6FC] px-6 py-20 md:py-24">
             <div className="mx-auto max-w-7xl">
@@ -75,14 +75,21 @@ const EligibilityCriteria = () => {
                 </div>
 
                 {/* Information Panel */}
-                <div className="mt-10 overflow-hidden rounded-3xl bg-[#2A2076]">
+                {/* Information Panel */}
+                <div
+                    className="mt-10 overflow-hidden rounded-3xl"
+                    style={{
+                        background:
+                            "linear-gradient(90deg, rgba(217, 33, 87, 0.20) 0%, rgba(41, 31, 117, 0.20) 100%), #FFFFFF",
+                    }}
+                >
                     <div className="grid items-center gap-8 px-7 py-8 md:grid-cols-[1fr_auto] md:px-10 md:py-10">
                         <div>
-                            <h3 className="mb-3 text-2xl text-white md:text-3xl">
+                            <h3 className="mb-3 text-2xl text-[#2A2076] md:text-3xl">
                                 Not sure if your child is eligible?
                             </h3>
 
-                            <p className="max-w-2xl text-sm leading-6 text-white/75 md:text-base">
+                            <p className="max-w-2xl text-sm leading-6 text-[#2A2076]/75 md:text-base">
                                 Our admissions team can help you understand class availability,
                                 age criteria, and the admission requirements applicable to your
                                 child's grade.
@@ -92,10 +99,10 @@ const EligibilityCriteria = () => {
                         <button
                             onClick={() => navigate("/contact")}
                             className="group flex w-fit items-center gap-2 rounded-full
-                border border-white px-6 py-3
-                text-sm text-white
-                transition-all duration-300
-                hover:bg-white hover:text-[#2A2076]"
+        border border-[#2A2076] px-6 py-3
+        text-sm text-[#2A2076]
+        transition-all duration-300
+        hover:bg-[#2A2076] hover:text-white"
                         >
                             Contact Admissions
 

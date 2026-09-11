@@ -77,24 +77,30 @@ const TechnologyLearning = () => {
           </div>
 
           {/* Right Technology Visual */}
-          <div className="relative overflow-hidden rounded-3xl bg-[#2A2076] p-8 md:p-10">
-            <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/10" />
-            <div className="absolute -bottom-20 -left-16 h-48 w-48 rounded-full bg-white/10" />
+          <div
+            className="relative overflow-hidden rounded-3xl p-8 md:p-10"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(217, 33, 87, 0.20) 0%, rgba(41, 31, 117, 0.20) 100%), #FFFFFF",
+            }}
+          >
+            <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#2A2076]/10" />
+            <div className="absolute -bottom-20 -left-16 h-48 w-48 rounded-full bg-[#D92157]/10" />
 
             <div className="relative">
-              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-white">
+              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#2A2076]">
                 <Monitor
                   size={32}
                   strokeWidth={1.6}
-                  className="text-[#2A2076]"
+                  className="text-white"
                 />
               </div>
 
-              <h3 className="mb-4 text-2xl font-normal text-white md:text-3xl">
+              <h3 className="mb-4 text-2xl font-normal text-[#2A2076] md:text-3xl">
                 Learning Beyond the Classroom
               </h3>
 
-              <p className="mb-8 leading-7 text-white/80">
+              <p className="mb-8 leading-7 text-[#2A2076]/80">
                 We combine traditional teaching with modern tools and
                 resources to create a learning experience that helps students
                 understand concepts, explore ideas, and develop practical
@@ -102,14 +108,14 @@ const TechnologyLearning = () => {
               </p>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-xl border border-white/20 bg-white/10 p-4">
-                  <p className="text-sm text-white/70">Focus</p>
-                  <p className="mt-1 text-lg text-white">Innovation</p>
+                <div className="rounded-xl border border-[#2A2076]/20 bg-white/40 p-4">
+                  <p className="text-sm text-[#2A2076]/70">Focus</p>
+                  <p className="mt-1 text-lg text-[#2A2076]">Innovation</p>
                 </div>
 
-                <div className="rounded-xl border border-white/20 bg-white/10 p-4">
-                  <p className="text-sm text-white/70">Approach</p>
-                  <p className="mt-1 text-lg text-white">Interactive</p>
+                <div className="rounded-xl border border-[#2A2076]/20 bg-white/40 p-4">
+                  <p className="text-sm text-[#2A2076]/70">Approach</p>
+                  <p className="mt-1 text-lg text-[#2A2076]">Interactive</p>
                 </div>
               </div>
             </div>

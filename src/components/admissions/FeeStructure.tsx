@@ -9,15 +9,18 @@ import {
 const feeItems = [
   {
     title: "Registration Fee",
-    description: "Applicable at the time of submitting the admission application.",
+    description:
+      "Applicable at the time of submitting the admission application.",
   },
   {
     title: "Admission Fee",
-    description: "One-time fee applicable upon confirmation of admission.",
+    description:
+      "One-time fee applicable upon confirmation of admission.",
   },
   {
     title: "Tuition Fee",
-    description: "Academic fee payable as per the selected class and school guidelines.",
+    description:
+      "Academic fee payable as per the selected class and school guidelines.",
   },
   {
     title: "Other Charges",
@@ -102,28 +105,38 @@ const FeeStructure = () => {
           </div>
 
           {/* Side Card */}
-          <div className="rounded-3xl bg-[#2A2076] p-7 text-white md:p-8">
-            <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
-              <BookOpen size={26} />
+          <div
+            className="rounded-3xl p-7 md:p-8"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(217, 33, 87, 0.20) 0%, rgba(41, 31, 117, 0.20) 100%), #FFFFFF",
+            }}
+          >
+            <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#2A2076]/10">
+              <BookOpen size={26} className="text-[#2A2076]" />
             </div>
 
-            <h3 className="mb-4 text-2xl">
+            <h3 className="mb-4 text-2xl text-[#2A2076]">
               Plan Your Child's Education
             </h3>
 
-            <p className="mb-7 text-sm leading-6 text-white/75">
+            <p className="mb-7 text-sm leading-6 text-[#2A2076]/75">
               The final fee structure will depend on the student's class and
               applicable school policies. Parents will receive complete fee
               details during the admission process.
             </p>
 
-            <div className="rounded-2xl bg-white/10 p-5">
+            {/* Please Note */}
+            <div className="rounded-2xl bg-[#2A2076]/10 p-5">
               <div className="mb-3 flex items-center gap-2">
-                <Info size={18} />
-                <span className="text-sm">Please Note</span>
+                <Info size={18} className="text-[#2A2076]" />
+
+                <span className="text-sm text-[#2A2076]">
+                  Please Note
+                </span>
               </div>
 
-              <p className="text-sm leading-6 text-white/70">
+              <p className="text-sm leading-6 text-[#2A2076]/70">
                 Fees once paid will be subject to the school's applicable
                 refund and cancellation policies.
               </p>
