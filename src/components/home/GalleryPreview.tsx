@@ -1,27 +1,32 @@
 import { ArrowRight, Images } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// Reuse your existing gallery data here.
-// Replace these paths with the same images used by your Gallery page.
+import school2 from "../../assets/gallery/school2.jpg";
+import school4 from "../../assets/gallery/school4.jpg";
+import school7 from "../../assets/gallery/school7.webp";
+import school6 from "../../assets/gallery/school6.jpeg";
+import school5 from "../../assets/gallery/school5.jpeg";
+
+
 const galleryImages = [
   {
-    src: "/src/assets/gallery/school2.jpg",
+    src: school2,
     alt: "Students at JADHAV Public School",
   },
   {
-    src: "/src/assets/gallery/school4.jpg",
+    src: school4,
     alt: "School learning activities",
   },
   {
-    src: "/src/assets/gallery/school7.webp",
+    src: school7,
     alt: "Students participating in activities",
   },
   {
-    src: "/src/assets/gallery/school6.jpeg",
+    src: school6,
     alt: "School campus",
   },
   {
-    src: "/src/assets/gallery/school5.jpeg",
+    src: school5,
     alt: "Students enjoying school activities",
   },
 ];
