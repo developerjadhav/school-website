@@ -1,3 +1,4 @@
+import Hero from "../components/Hero";
 import WelcomeSection from "../components/home/WelcomeSection";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import AcademicSection from "../components/home/AcademicSection";
@@ -8,12 +9,13 @@ import HomeCTA from "../components/home/HomeCTA";
 const home = () => {
   return (
     <>
+      <Hero />
       <WelcomeSection />
       <WhyChooseUs />
       <AcademicSection />
       <FacilitiesPreview />
       <GalleryPreview />
-      <HomeCTA/>
+      <HomeCTA />
     </>
   );
 };

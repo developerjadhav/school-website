@@ -1,3 +1,4 @@
+import PageHero from "../components/common/PageHero";
 import FacilityHighlights from "../components/facilities/FacilityHighlights";
 import AcademicFacilities from "../components/facilities/AcademicFacilities";
 import SportsRecreation from "../components/facilities/SportsRecreation";
@@ -10,7 +11,11 @@ import FacilitiesGrid from "../components/facilities/FacilitiesGrid";
 const Facilities = () => {
   return (
     <>
-    <FacilitiesGrid />
+      <PageHero
+        title="Facilities"
+        description="Discover a safe, supportive, and engaging school environment designed to help students learn, explore, and grow."
+      />
+      <FacilitiesGrid />
       <FacilityHighlights />
       <AcademicFacilities />
       <SportsRecreation />

@@ -1,3 +1,4 @@
+import PageHero from "../components/common/PageHero";
 import AcademicPhilosophy from "../components/Academics/AcademicPhilosophy";
 import LearningApproach from "../components/Academics/LearningApproach";
 import CurriculumSubjects from "../components/Academics/CurriculumSubjects";
@@ -9,8 +10,10 @@ import AcademicsCTA from "../components/Academics/AcademicsCTA";
 const Academics = () => {
   return (
     <>
-      {/* Existing Academics Hero */}
-
+      <PageHero
+        title="Academics"
+        description="Explore an engaging academic environment designed to build strong foundations, encourage curiosity, and prepare students for the future."
+      />
       <AcademicPhilosophy />
       <LearningApproach />
       <CurriculumSubjects />
@@ -18,8 +21,6 @@ const Academics = () => {
       <AssessmentProgress />
       <FutureSkills />
       <AcademicsCTA />
-
-      {/* Existing Footer */}
     </>
   );
 };

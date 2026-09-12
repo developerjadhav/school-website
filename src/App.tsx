@@ -9,7 +9,7 @@ import Facilities from "./pages/Facilities";
 import Gallery from "./pages/GalleryPage";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
-import Hero from "../src/components/home/Hero";
+// import Hero from "../src/components/Hero";
 import Footer from "./components/Footer";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 
       <main className="pt-12.5">
 
-        <Hero />
+        {/* <Hero /> */}
 
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,3 +1,4 @@
+import PageHero from "../components/common/PageHero";
 import AdmissionIntro from "../components/admissions/AdmissionIntro";
 import AdmissionProcess from "../components/admissions/AdmissionProcess";
 import EligibilityCriteria from "../components/admissions/EligibilityCriteria";
@@ -10,6 +11,10 @@ import AdmissionsCTA from "../components/admissions/AdmissionsCTA";
 const Admissions = () => {
   return (
     <>
+      <PageHero
+        title="Admissions"
+        description="Begin your child's journey with JADHAV Public School and discover an environment built around learning, growth, and opportunity."
+      />
       <AdmissionIntro />
       <AdmissionProcess />
       <EligibilityCriteria />
