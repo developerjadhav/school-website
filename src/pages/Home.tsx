@@ -1,10 +1,21 @@
-// import Hero from "../components/home/Hero";
+import WelcomeSection from "../components/home/WelcomeSection";
+import WhyChooseUs from "../components/home/WhyChooseUs";
+import AcademicSection from "../components/home/AcademicSection";
+import FacilitiesPreview from "../components/home/FacilitiesPreview";
+import GalleryPreview from "../components/home/GalleryPreview";
+import HomeCTA from "../components/home/HomeCTA";
 
-const Home = () => {
+const home = () => {
   return (
-    // <Hero />
-    "this is HOME PAGE"
-  )
-}
+    <>
+      <WelcomeSection />
+      <WhyChooseUs />
+      <AcademicSection />
+      <FacilitiesPreview />
+      <GalleryPreview />
+      <HomeCTA/>
+    </>
+  );
+};
 
-export default Home
+export default home;
