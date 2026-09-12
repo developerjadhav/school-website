@@ -70,7 +70,7 @@ const AdmissionProcess = () => {
           <div className="absolute left-[10%] right-[10%] top-10 h-px bg-[#2A2076]/20" />
 
           <div className="grid grid-cols-5 gap-6">
-            {admissionSteps.map((item, index) => {
+            {admissionSteps.map((item) => {
               const Icon = item.icon;
 
               return (
